@@ -1,13 +1,12 @@
 import React from 'react'
-import { useSelector } from 'react-redux'
 import Child from './Child'
-
+import { useSelector } from 'react-redux'
 const Parent = () => {
-    const todo = useSelector((state:any)=>state.todo)
-    console.log(todo)
+    const state = useSelector((state)=>state);
+    console.log(state)
   return (
     <div>Parent
-        <Child/> 
+        <Child/>
     </div>
   )
 }
