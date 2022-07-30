@@ -1,8 +1,11 @@
 import React from 'react'
+import Parent from './Parent'
 
 const GrandParent = () => {
   return (
-    <div>GrandParent</div>
+    <div>GrandParent
+        <Parent/>   
+    </div>
   )
 }
 
