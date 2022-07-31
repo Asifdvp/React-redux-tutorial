@@ -1,10 +1,22 @@
 import React from 'react'
-import { useSelector } from 'react-redux'
+import { useSelector,useDispatch } from 'react-redux';
+
 const Child = () => {
-const state = useSelector((state)=>state);
-console.log(state)
+  const dispatch = useDispatch();
+const counter:any = useSelector((state:{counter:number})=>state.counter);
+console.log(counter)
   return (
-    <div>Child</div>
+    <div>Child
+<button onClick={()=>{dispatch({type:"INC"})}}>increment</button>
+{counter}
+<button onClick={()=>{dispatch({type:"DEC"})}}>decrepement</button>
+
+
+
+
+
+
+    </div>
   )
 }
 
