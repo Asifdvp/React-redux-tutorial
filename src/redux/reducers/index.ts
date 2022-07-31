@@ -1,11 +1,7 @@
 import { combineReducers } from "redux";
-import { counterReducer } from "./counterReducer";
-import { profileReducer } from "./profileReducer";
-import { todoReducer } from "./todoReducer";
+import { todoReducer } from "./todoReducers";
 
 const rootReducer = combineReducers({
-  counter: counterReducer,
-  profile: profileReducer,
-  todo: todoReducer,
-});
-export default rootReducer;
+    todo:todoReducer
+})
+export default rootReducer
